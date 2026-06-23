@@ -293,9 +293,6 @@
       <p class="sec-sub" data-fr="Des projets concrets avec des résultats mesurables." data-en="Real projects with measurable results.">Des projets concrets avec des résultats mesurables.</p>
     </div>
     <div class="grid-projects" id="projectsGrid"></div>
-    <div class="reveal" style="text-align:center;margin-top:44px">
-      <a class="btn btn-ghost" href="https://anass2024.github.io/anass24.github.io/" target="_blank" rel="noopener" data-fr="Voir plus de projets →" data-en="See more projects →">Voir plus de projets →</a>
-    </div>
   </div>
 </section>
 
@@ -411,7 +408,8 @@ const projects = [
     fr:"Clustering K-Means sur 2 240 clients répartis en 4 groupes comportementaux (revenu, dépenses, engagement). PCA pour une visualisation 2D.",
     en:"K-Means clustering on 2,240 customers into 4 behavioral groups (income, spending, engagement). PCA for 2D visualization.",
     deliverFr:"Framework de rétention et d'upsell actionnable.",
-    deliverEn:"Actionable retention and upsell campaign framework."
+    deliverEn:"Actionable retention and upsell campaign framework.",
+    link:"https://anass2024.github.io/anass24.github.io/projects/customer_segmentation/customer_segmentation_Report.pdf"
   },
   {
     title:"Microsoft Stock Price Forecasting (LSTM)",
@@ -420,7 +418,8 @@ const projects = [
     fr:"Modèle de deep learning entraîné sur 37 ans de données MSFT (1986–2023) avec normalisation, fenêtrage de séquences et évaluation RMSE.",
     en:"Deep learning model trained on 37 years of MSFT historical data (1986–2023) with normalization, sequence windowing, RMSE evaluation.",
     deliverFr:"Rapport interactif avec analyse des échecs 2020/2022 liés aux dynamiques comportementales.",
-    deliverEn:"Interactive report with 2020/2022 failure analysis linked to behavioral market dynamics."
+    deliverEn:"Interactive report with 2020/2022 failure analysis linked to behavioral market dynamics.",
+    link:"https://anass2024.github.io/anass24.github.io/projects/msft_analysis/MSFT.html"
   },
   {
     title:"Car Sales Strategy: Value Retention & Market Entry",
@@ -429,7 +428,28 @@ const projects = [
     fr:"Analyse de dépréciation sur ~30 constructeurs et ~157 modèles. Porsche identifié comme leader avec 91,7 % de rétention à un an.",
     en:"Depreciation analysis across ~30 manufacturers and ~157 models. Porsche identified as top performer at 91.7% one-year retention.",
     deliverFr:"Rapport exécutif avec framework de go-to-market niche vs. volume.",
-    deliverEn:"Executive report with niche vs. volume go-to-market framework."
+    deliverEn:"Executive report with niche vs. volume go-to-market framework.",
+    link:"https://anass2024.github.io/anass24.github.io/projects/car_sales_analysis/index.html"
+  },
+  {
+    title:"Banking Transactions SQL Analysis",
+    tags:["SQL","SQLite","Window Functions"],
+    badge:{fr:"2 000 transactions · 490 clients · 21,9M MAD analysés",en:"2,000 transactions · 490 customers · 21.9M MAD analyzed"},
+    fr:"Analyse SQL de 2 000 transactions bancaires marocaines (2022–2023) : taux d'échec par canal, performance régionale, croissance annuelle, segmentation par âge et risque de crédit, via 15 requêtes.",
+    en:"SQL analysis of 2,000 Moroccan banking transactions (2022–2023): channel failure rates, regional performance, year-over-year growth, age segmentation and credit risk, across 15 queries.",
+    deliverFr:"15 requêtes documentées avec rapport complet sur GitHub.",
+    deliverEn:"15 documented queries with a full report on GitHub.",
+    link:"https://github.com/Anass2024/banking-transactions-sql"
+  },
+  {
+    title:"Personal Finance Tracker (Live App)",
+    tags:["JavaScript","Firebase","Chart.js"],
+    badge:{fr:"Application web interactive — en production",en:"Interactive web app — live in production"},
+    fr:"Tableau de bord de finances personnelles : transactions, budgets mensuels, visualisations Chart.js, export CSV, mode invité (localStorage) et synchronisation cloud Firebase.",
+    en:"Personal finance dashboard: transactions, monthly budgets, Chart.js visualizations, CSV export, guest mode (localStorage) and Firebase cloud sync.",
+    deliverFr:"Application en ligne, accessible et testable immédiatement.",
+    deliverEn:"Live app, accessible and testable instantly.",
+    link:"https://anass2024.github.io/anass24.github.io/finance-tracker/"
   }
 ];
 
@@ -463,7 +483,7 @@ function renderProjects(){
       <div class="badge" data-fr="${p.badge.fr}" data-en="${p.badge.en}">${p.badge.fr}</div>
       <p data-fr="${p.fr}" data-en="${p.en}">${p.fr}</p>
       <div class="deliver"><b data-fr="Livrable :" data-en="Deliverable:">Livrable :</b> <span data-fr="${p.deliverFr}" data-en="${p.deliverEn}">${p.deliverFr}</span></div>
-      <a class="proj-link" href="https://anass2024.github.io/anass24.github.io/" target="_blank" rel="noopener" data-fr="Voir le projet →" data-en="View project →">Voir le projet →</a>
+      <a class="proj-link" href="${p.link}" target="_blank" rel="noopener" data-fr="Voir le projet →" data-en="View project →">Voir le projet →</a>
     </div>`).join("");
 }
 function renderSkills(){
